@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <script>
+  var username = (prompt('Приветствую, как вас зовут?'))
+  alert('Приветсвую вас в своем скрипте, '+username+' Здесь мы подсчитаем ваш сумму вашего банковского счета. Думаю приступим.');
+  var amount = parseInt(prompt('Введите сумму вклада, руб'));
+  while (isNaN(amount)) {
+		amount  = parseInt(prompt("Пожалуйста, введите число! Укажите сумму вклада"));
+	}
+  var years = parseInt(prompt('Введите срок вклада, год(ы)'));
+  while (isNaN(years)) {
+		amount  = parseInt(prompt("Пожалуйста, введите число! Укажите срок вклада"));
+	}
+  var percent = parseInt(prompt('Введите процентную ставку, % в год.'));
+  while (isNaN(percent)) {
+		amount  = parseInt(prompt("Пожалуйста, введите число! Укажите процентную ставку"));
+	}
+  var sum = amount;
+  for (year = 1;year<=years;year++)
+  {
+	amount = amount+(amount*(percent/100));
+	alert('Прошел '+year+' год. Сумма вклада составляет: '+amount.toFixed(0)+' рублей.');
+  }
+  var hustle = amount - sum;
+  alert('За '+years+' лет вы заработали '+hustle.toFixed(0)+' руб. Всего доброго.');
+
+
+  </script>
+
+</body>
+
+</html>
