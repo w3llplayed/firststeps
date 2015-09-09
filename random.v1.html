@@ -8,13 +8,18 @@
 <body>
 
   <script>
+  var arr = [];
   function getRandomInt(min, max) {
   	return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  var a = prompt('Введите первое число из списка.');
-  var b = prompt('Введите второе число из списка');
+  var a = parseInt(prompt('Введите первое число из списка.'));
+  var b = parseInt(prompt('Введите второе число из списка'));
+  var c = parseInt(prompt('Введите желаемое количество случайных чисел'))
+  for (i = 0; i<=c; i++){
   var n = getRandomInt(a, b);
-  alert(n);
+  arr.push(n);
+  }
+  alert(arr);
   </script>
 
 </body>
