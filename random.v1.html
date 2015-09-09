@@ -13,8 +13,17 @@
   	return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   var a = parseInt(prompt('Введите первое число из списка.'));
-  var b = parseInt(prompt('Введите второе число из списка'));
-  var c = parseInt(prompt('Введите желаемое количество случайных чисел'))
+  while (isNaN(a)) {
+		a  = parseInt(prompt("Пожалуйста, введите число! Введите первое число из списка."));
+	}
+  var b = parseInt(prompt('Введите второе число из списка.'));
+  while (isNaN(b)) {
+		b  = parseInt(prompt("Пожалуйста, введите число! Введите второе число из списка."));
+	}
+  var c = parseInt(prompt('Введите желаемое количество случайных чисел.'))
+  while (isNaN(c)) {
+		c  = parseInt(prompt("Пожалуйста, введите число! Введите желаемое количество случайных чисел."));
+	}
   for (i = 0; i<=c; i++){
   var n = getRandomInt(a, b);
   arr.push(n);
